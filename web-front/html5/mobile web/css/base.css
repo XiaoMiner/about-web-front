@@ -1,0 +1,38 @@
+
+/*样式初始化*/
+/* input {
+  border: none;
+  outline: none; 
+  outline作用: 位于边框的边缘,突出元素
+   用法: 有四个属性: outline-color outline-style outline-width
+   chrome safari 主流浏览器支持该属性
+   -webkit-appearance: none;
+   firefox浏览器支持该属性
+   -moz-appearance: none;
+   appearance:作用: 使元素看上去像标准用户界面元素
+   appearance: none;
+} */
+/*我的网站为了使用方便统一的类名*/
+/*鼠标放上去为小手的状态*/
+.pointer {
+  cursor: pointer;
+}
+/*左浮动*/
+.f_l {
+  float: left;
+}
+/*右浮动*/
+.f_r {
+  float: right;
+}
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+
+}

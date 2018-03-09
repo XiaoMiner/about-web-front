@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>表单验证</title>
+</head>
+<body>
+<form action="" method="get">
+  <input type="text" name="xiao" pattern="\w{3}" placeholder="xiao字符">
+  <input type="text" name="miner" autofocus="autofocus" placeholder="miner字符">
+  <input type="file" name="love" multiple="multiple">
+  <select name="menuValue" id="">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+  </select>
+  <input type="date" name="date">
+  <input type="number" name="number" placeholder="数字输入框">
+  <input type="range" name="range" min="1" max="10">
+  <input type="search" name="searchValue" placeholder="站点搜索">
+  <input type="email" name="email" placeholder="输入邮箱" multiple="multiple">
+  <input type="url" name="url" placeholder="输入地址">
+  <input type="submit">
+</form>
+  
+</body>
+<script>
+  // form
+      // novalidate => 该属性的功能是表单数据不再验证(规定的属性)就直接提交数据到后台。
+  // input
+    // autofocus => 页面加载后当前输入域自动回去焦点。
+    // multiple => 该属性功能是可以选取多个值。(input的file类型: 选取多个文件)
+    // pattern => 该属性的功能是一种正则模式,规定匹配输入域的输入字符的格式。
+    // placeholder => 该属性的功能是在输入域提供提示文本。
+    // required => 该属性的功能是规定输入域必须填写文本。
+</script>
+</html>

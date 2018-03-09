@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>地理定位</title>
+</head>
+<body>
+  <div id="showPosition1">1</div>
+  <button id="btn" onclick="getLocation()">点击显示位置</button>
+</body>
+<script>
+  var show = document.getElementById("showPosition1");
+ function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+    }
+  else{show.innerHTML="Geolocation is not supported by this browser.";}
+  }
+function showPosition(position)
+  {
+    console.log(position)
+  show.innerHTML="Latitude: " + position.coords.latitude +
+  "<br />Longitude: " + position.coords.longitude;
+  }
+       function showError(error){
+ 
+            switch(error.code) {
+                case error.TIMEOUT:
+                    showError("A timeout occured! Please try again!连接超时，请重试 ");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    showError('We can\'t detect your location. Sorry!亲爱的火星网友，非常抱歉，我们暂时无法为您所在的星球提供位置服务');
+                    break;
+                case error.PERMISSION_DENIED:
+                    showError('Please allow geolocation access for this to work.您拒绝了使用位置共享服务，查询已取消');
+                    break;
+                case error.UNKNOWN_ERROR:
+                    showError('An unknown error occured!');
+                    break;
+            }
+        }
+ 
+</script>
+</html>

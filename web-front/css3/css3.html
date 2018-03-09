@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>css3使用</title>
+  <style>
+    #div1 {
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+      /*给元素设置圆角*/
+      border-radius: 10px 10px;
+      text-align: center;
+      line-height: 100px;
+      font-family: "Helvetica";
+      font-weight: bold;
+      font-size: 12px;
+      font-style: italic;
+    }
+    #div2 {
+      width: 100px;
+      height: 100px;
+      /*box-shadow: 水平阴影的宽度 竖直阴影的宽度 阴影的模糊度 阴影的颜色 将外部阴影变为内部*/
+      box-shadow: 90px 10px 1px red inset;
+    }
+    #div3 {
+      width: 100px;
+      height: 100px;
+      border: 120px solid blue;
+      /*图片的资源 图片边界向内的偏移 图片边界的宽度 图片的排列方式*/
+      border-image: url(images/001.JPG) 0% 0% 0% 0% round;
+      // 还待研究。
+    }
+    #div4 {
+      width: 640px;
+      height: 960px;
+      text-align: center;
+      line-height: 240px;
+
+
+      border: 10px dotted skyblue;
+
+      background-image: url(images/001.JPG);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+     /*定位背景图片在元素的中位置*/
+      background-origin: content-box;
+      padding-left: 100px;
+      /*从背景图片本身的什么位置开始显示*/
+      background-clip: content-box;
+      /*在属性值为content-box background-clip不能生效*/
+    }
+
+    #div5 {
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+      text-align: center;
+      line-height: 100px;
+      text-shadow: 10px 10px 1px purple;
+    }
+    #div6 {
+      width: 100px;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid red;
+      /*首先要保证为单行文本,也就是所说的不会换行,浏览器有默认处理*/
+      white-space: nowrap;
+      /*保证元素为块级元素*/
+      display: block;
+      /*元素的超出部分隐藏*/
+      overflow: hidden;
+      /*文本隐藏的部分处理方式为省略*/
+      text-overflow: ellipsis;
+    }
+    #div7 {
+      width: 100px;
+      height: 500px;
+      border: 1px solid red;
+      /*单词过长时候自动换行*/
+      word-wrap: break-word;
+      /*单词在连字符处自动换行*/
+      /*word-break: keep-all;*/
+       /*相对于单词过长的时候自动换行*/
+       /*word-break: break-all;*/
+    }
+    #div8 {
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+      position: absolute;
+      /*元素位置的转换 平移*/
+      /*transform: translate(100px, 100px);*/
+      /*元素尺寸的转换 缩放*/
+      /*transform: scale(0.5, 0.5);*/
+      /*元素的2d旋转*/
+      /*transform: rotate(45deg);*/
+      /*元素的翻转 沿x旋转 沿y轴旋转 skew-歪斜()*/
+      /*transform: skew(-45deg, 0deg)*/
+      transform: rotate(45deg);
+      /*被转换的元素初始的位置*/
+      -webkit-transform-origin: center;
+      transform-origin: center;
+    }
+    #div9 {
+      width: 400px;
+      height: 400px;
+      border: 1px solid red;
+      position: relative;
+    }
+    #div10 {
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+      /*规定了元素转换的种类为3d, preserve为保留的意思: 保留3d种类*/
+      transform-style: preserve-3d;
+      transform: rotateX(45deg);
+    }
+    #div11 {
+      /*添加近远景属性: 离元素多远进行观看*/
+      perspective: 1000px;
+    }
+    #div12 {
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+      /*元素属性的过渡, 过渡属性的值: 属性的名称 过渡的时间 过渡的运动方式 延迟时间过渡
+       linear-线性(匀速) ease-缓解(先慢慢变快然后再变慢)*/
+      transition: height 2s linear 1s,transform 2s linear 1s, width 2s linear 1s;
+    }
+    #div12:hover {
+      width: 200px;
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+    #div13 {
+      width: 100px;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid red;
+      margin: 40px auto;
+      /*把边框的宽度看做为总高度和总宽度中*/
+      /*box-sizing: border-box;*/
+      /*content-box: 把元素当做为内容设置padding属性时作为元素的外边距处理*/
+      /*box-sizing: content-box;*/
+      outline: 1px solid blue;
+      /*outline-offset属性表示: 轮廓距离边框的距离 该距离不占空间*/
+      outline-offset: 20px;
+    }
+    #div14 {
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+    }
+    #div15 {
+      width:300px;
+      height: 400px;
+      border: 1px solid red;
+      /*column-count该属性表示把文本分为多少列*/
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count:2;
+      /*column-gap: 列数之间的间隔*/
+      column-gap: 20px;
+      /*列与列设置的边框*/
+      column-rule: 1px solid red;
+    }
+      #div16 {
+      height: 400px;
+      border: 1px solid red;
+      /*column-width:该属性表示每一列文本距离的宽度*/
+      column-width: 3px;
+      column-rule: 1px solid red;
+    }
+    @keyframes myfirst {
+      0% {left: 0px; top: 0px}
+      25% {left: 200px; top: 0px;}
+      50% {left: 200px; top: 200px;}
+      75% {left: 0px; top: 200px;}
+      100% {left: 0px; top: 0px;}
+    }
+    #div17 {
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+      position: absolute;
+      /*infinite: e(无数次) w(动画被无限次播放) alternate e(交替的,轮流的) w(动画被轮流的反复播放)*/
+      /*animation动画属性的值 1.动画函数的名称 2.动画持续的时间 3.动画的运动曲线 4.动画的延迟播放 5.动画播放的次数6.是否逆向播放 7.动画的开始和暂停*/
+      animation: myfirst 4s linear 1s infinite alternate running;
+    }
+    #btn1 {
+      text-decoration: none;
+      border: none;
+      padding: 15px;
+      color: white;
+      background-color: skyblue;
+      /*按钮元素通过font-size控制其大小*/
+      font-size: 40px;
+    }
+    /* css中的> 表示父代包含子代元素 + 表示同级元素 这里不包含已经设置id的div元素*/
+    #div18 > div+div {
+      background: red;
+      border: 1px solid red;
+    }
+    #div20 {
+      background-color: skeyblue;
+    }
+    #div20:after {
+      content:"”";
+    }
+    #div20:before {
+      content: "“";
+    }
+    #div21 {
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+      transition: all 4s;
+    }
+  </style>
+</head>
+<body>
+ <!--  边框圆角样式的使用
+ <div id="div1">边框圆角样式的使用</div>
+ 盒子的阴影
+ <div id="div2">给盒子设置阴影</div>
+ 给元素设置边框图片
+ <div id="div3">给元素设置边框图片</div>
+ <div id="div4">
+   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic facere iste reiciendis, beatae voluptatem ab animi. Incidunt numquam et accusamus, explicabo magni minus omnis dignissimos, animi impedit, perspiciatis provident aspernatur!
+ </div>
+ <div id="div5">文本的阴影处理</div> -->
+<!--   <div id="div6">文本的溢出元素时的处理</div>
+<div id="div7">wo shi yi ge : haoxuesheng-zenmo-banne-woyebuzhidao-gaizenmban</div> -->
+<!--   <div id="div9">
+    <div id="div8">元素的转换</div>   
+  </div> -->
+ <!--  <div id="div11">
+   <div id="div10">3d元素转换</div>  
+ </div> -->
+  <!-- <div id="div12">元素的过渡</div> -->
+<!--   <div id="div13">盒子的尺寸、轮廓的处理</div> -->
+  <!-- <div id="div14">测试盒子</div> -->
+ <!--  <div id="div15">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat et qui impedit odio, porro corrupti quod, dolor facilis illum incidunt odit eveniet sed, aperiam debitis soluta nisi eaque ab ducimus.
+  </div> -->
+ <!--  <div id="div16">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, repellendus harum ex earum iste soluta consequatur aliquam praesentium quisquam, unde veritatis eius beatae provident quibusdam ipsum cumque sit officiis ullam.
+  </div> -->
+<!--   <div id="div17">给元素设置动画</div> -->
+<!-- <button id="btn1">按钮</button> -->
+<!-- <div id="div18"> 
+   <div id="div19">1</div>
+   <div>2</div>
+   <div>3</div>
+   <div>4</div>
+</div> -->
+<!-- <div id="div20">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea iure eveniet cumque consequuntur perspiciatis sunt, illo nobis odit, inventore necessitatibus! Pariatur nesciunt officia veritatis eos quibusdam mollitia cupiditate quo qui.
+</div> -->
+<div id="div21" onclick="setClick(this)">触发过渡的过程</div>
+</body>
+<script>
+  var currentDiv = document.getElementById("div21");
+  var currentDivWidth = currentDiv.style.width;
+  var flag = 1;
+  var flagT = true;
+  function setClick() {
+    console.log(1)
+    if(flag == 1 && flagT){
+      flagT = false;
+      flag = 2;
+    styleTransition();
+    return;
+    }
+    if(flag==2 && flagT) {
+      flagT = false;
+      flag = 1;
+    styleTransitionT();
+    return;
+    }
+  }
+  function styleTransition(){
+    currentDiv.style.width = "400px";
+    currentDiv.style.height ="600px";
+    setTimeout(function(){
+        flagT = true;
+    }, 4000);
+  }
+  function styleTransitionT(){
+    currentDiv.style.width = "200px";
+    currentDiv.style.height ="200px";
+    setTimeout(function(){
+        flagT = true;
+    }, 4000);
+  }
+</script>
+</html>
+
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- 如何把pc端的页面放到mobile端仍然正常显示,利用viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+  <title>mobile web</title>
+  <link rel="stylesheet" href="css/base.css">
+  <!-- 不同媒体设备状态下的布局 外部样式-->
+  <!-- iphone5 -->
+ <!--  <link rel="stylesheet" media="only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait)" href="css/iphone5.css"> -->
+  <!-- iphone6 -->
+  <!-- <link rel="stylesheet" media="only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait)" href="css/iphone6.css"> -->
+  <style>
+  @media only screen and (min-width: 1200px){
+        html {
+          font-size: 100px;
+        }
+  }
+  @media only screen and (min-width: 600px) and (max-width: 1200px) {
+       html {
+        font-size: 50px;
+       }
+  }
+     div {
+      width: 3rem;
+      height: 1rem;
+      border: 1px solid red;
+     }
+  p {
+    font-size: 16px;
+  }
+  </style>
+</head>
+<body>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse aut distinctio accusamus modi quo totam! Quam iste ipsa assumenda excepturi praesentium, eligendi, magni repellendus et, nemo placeat deleniti facere delectus.</p>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <input type="text">
+</body>
+<script>
+  // alert(screen.width);
+</script>
+</html>
